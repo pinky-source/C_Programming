@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void read(int arr[]) {
+    printf("Enter the array values:\n");
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
+    }
+}
+
+void display(int arr[]) {
+    printf("Array elements:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d \n", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arr[5];
+    read(arr);      // fill the array
+    display(arr);   // print the array
+
+    return 0;
+}
