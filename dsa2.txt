@@ -1,0 +1,60 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int a=0;
+    float b=0;
+    char c;
+    double d;
+    int* e=&a;
+    float* f=&b;
+    char* g=&c;
+    double* h=&d;
+    
+    printf("Size of int : %zu\n",sizeof(a));
+    printf("Size of int ptr:%zu\n",sizeof(e));
+    
+    printf("Size of float : %zu\n",sizeof(b));
+    printf("Size of float ptr:%zu\n",sizeof(f));
+    
+    printf("Size of char : %zu\n",sizeof(c));
+    printf("Size of char ptr:%zu\n",sizeof(g));
+    
+    printf("Size of double : %zu\n",sizeof(d));
+    printf("Size of double ptr:%zu\n",sizeof(h));
+
+    return 0;
+}
+
+
+RETURN VALUVE:
+#include <stdio.h>
+
+int* read() {
+    static int arr[5];    // static array (lives after function ends)
+
+    printf("Enter 5 values:\n");
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    return arr;           // return pointer to array
+}
+
+void display(int arr[]) {
+    printf("Array elements:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d\n", arr[i]);
+    }
+}
+
+int main() {
+    int *arr;           // pointer to hold returned array
+
+    arr = read();       // receive array from read()
+    display(arr);       // pass array to display()
+
+    return 0;
+}
+
